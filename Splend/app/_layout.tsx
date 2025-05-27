@@ -14,6 +14,7 @@ const RootLayout = () => {
         headerTitleStyle: {
           fontWeight: 'bold',
         },
+        headerShown: false,
       }}
     >
       {}

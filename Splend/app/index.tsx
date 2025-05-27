@@ -1,11 +1,19 @@
 // index.tsx (or index.js if you're not using TypeScript)
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Button } from 'react-native';
+import { useRouter } from 'expo-router';
 
 const App = () => {
+  const router = useRouter();
+
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Hello World</Text>
+
+      <Button
+        title = "Go to Home Screen"
+        onPress = {() => router.push('/(tabs)')}
+      />
     </View>
   );
 };
@@ -19,6 +27,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 24,        // Sets the font size
+    marginBottom: 20,
   },
 });
 
